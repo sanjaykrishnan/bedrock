@@ -1,0 +1,24 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+ # License, v. 2.0. If a copy of the MPL was not distributed with this
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% from "macros-protocol.html" import billboard, card, feature_card with context %}
+
+{% extends "base-protocol-mozilla.html" %}
+
+{% block content %}
+<main class="mzp-l-content">
+  <h1>Adjust links test page</h1>
+  <p>Each link below should redirect to the correct app store, irrespective of being clicked on mobile or desktop.</p>
+  <ul>
+    <li><a href="{{ firefox_adjust_url('ios', 'test-page') }}">Firefox on the Apple App Store</a></li>
+    <li><a href="{{ firefox_adjust_url('android', 'test-page') }}">Firefox on Google Play</a></li>
+    <li><a href="{{ focus_adjust_url('ios', 'test-page') }}">Firefox Focus on the Apple App Store</a></li>
+    <li><a href="{{ focus_adjust_url('android', 'test-page') }}">Firefox Focus on Google Play</a></li>
+    <li><a href="{{ lockwise_adjust_url('ios', 'test-page') }}">Firefox Lockwise on the Apple App Store</a></li>
+    <li><a href="{{ lockwise_adjust_url('android', 'test-page') }}">Firefox Lockwise on Google Play</a></li>
+    <li><a href="{{ pocket_adjust_url('ios', 'test-page') }}">Pocket on the Apple App Store</a></li>
+    <li><a href="{{ pocket_adjust_url('android', 'test-page') }}">Pocket on Google Play</a></li>
+  </ul>
+</main>
+{% endblock%}

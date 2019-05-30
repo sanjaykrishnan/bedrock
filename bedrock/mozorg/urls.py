@@ -317,4 +317,7 @@ urlpatterns = (
     url(r'^xbl$', views.namespaces, {'namespace': 'xbl'}),
 
     page('locales', 'mozorg/locales.html'),
+
+    # TODO remove before merging!
+    page('adjust-test', 'mozorg/adjust-test.html'),
 )
